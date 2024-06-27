@@ -5,10 +5,11 @@ export const User = {
   lastName: "Kim",
   displayName: "stevkim",
   image: ProfileImage,
-  facebook: "",
-  linkedIn: "",
-  twitter: "",
-  instagram: "",
-  dribble: "",
-  headline: "Fullstack Software Dev - React/Typescript ecosystem",
+  facebook: "https://stevkim.dev",
+  linkedIn: "https://www.linkedin.com/in/stevkim/",
+  twitter: "https://stevkim.dev",
+  instagram: "https://stevkim.dev",
+  dribbble: "https://stevkim.dev",
+  headline:
+    "Fullstack Software Dev - Expertise in the React/Typescript ecosystem. Building highly performant applications with an emphasis on speed and clean code practices.",
 };
