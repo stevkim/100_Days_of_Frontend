@@ -11,7 +11,8 @@ interface Props {
 const NavDropdown = ({ children }: Props) => {
   const { open, setOpen } = useContext(NavContext);
 
-  const handleToggle = () => {
+  const handleToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     if (open === "components") {
       setOpen(null);
     } else {
@@ -23,7 +24,7 @@ const NavDropdown = ({ children }: Props) => {
     <>
       <div className="">
         <button
-          onClick={handleToggle}
+          onClick={(e) => handleToggle(e)}
           className="flex flex-row items-center rounded-md px-2 py-1 hover:bg-gray-400"
         >
           {children}{" "}
@@ -32,9 +33,7 @@ const NavDropdown = ({ children }: Props) => {
             className={`ml-1 transition-all ${open === "components" ? "rotate-180" : ""}`}
           />
         </button>
-        {open === "components" ? (
-          <DropdownList handleToggle={handleToggle} />
-        ) : null}
+        {open === "components" ? <DropdownList /> : null}
       </div>
     </>
   );

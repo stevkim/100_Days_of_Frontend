@@ -3,11 +3,7 @@ import { NAVS } from "./Navs";
 import DropdownItem from "./DropdownItem";
 import { Puzzle } from "lucide-react";
 
-interface Props {
-  handleToggle: () => void;
-}
-
-const DropdownList = ({ handleToggle }: Props) => {
+const DropdownList = () => {
   return (
     <motion.div
       className="z-1 fixed left-0 top-[50px] flex w-[100vw] flex-col rounded-md bg-gray-300 p-2 shadow-md"
@@ -27,12 +23,7 @@ const DropdownList = ({ handleToggle }: Props) => {
       </div>
       <div className="flex flex-row flex-wrap overflow-y-auto">
         {NAVS.map((nav, index) => (
-          <DropdownItem
-            key={nav.name}
-            nav={nav}
-            handleToggle={handleToggle}
-            day={index + 1}
-          />
+          <DropdownItem key={nav.name} nav={nav} day={index + 1} />
         ))}
       </div>
     </motion.div>
