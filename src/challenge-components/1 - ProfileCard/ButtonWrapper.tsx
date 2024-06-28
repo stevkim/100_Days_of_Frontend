@@ -3,10 +3,10 @@ import Button from "./Buttons/Button";
 const ButtonWrapper = () => {
   return (
     <div className="mt-auto flex w-full flex-row justify-evenly">
-      <Button className="bg-[#008CFF] text-white hover:bg-[#0066FF]">
+      <Button className="text-white bg-primary-blue hover:bg-secondary-blue">
         Follow
       </Button>
-      <Button className="border-2 hover:bg-gray-100">Message</Button>
+      <Button className="hover:bg-gray-100 border-2">Message</Button>
     </div>
   );
 };

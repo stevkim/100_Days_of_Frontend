@@ -26,7 +26,7 @@ const Navbar = () => {
       <NavContext.Provider value={{ open, setOpen }}>
         <Link
           to="/"
-          className="mr-auto rounded-sm px-2 py-1 text-lg hover:bg-gray-400"
+          className="hover:bg-gray-400 mr-auto rounded-sm px-2 py-1 text-lg"
         >
           100 Days of Frontend
         </Link>

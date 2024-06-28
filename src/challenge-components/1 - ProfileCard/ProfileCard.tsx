@@ -25,7 +25,7 @@ const ProfileCard = () => {
         <h4 className="text-2xl tracking-[.5rem]">
           {firstName + " " + lastName}
         </h4>
-        <h6 className="text-sm text-gray-600">@{displayName}</h6>
+        <h6 className="text-gray-500 text-sm">@{displayName}</h6>
       </div>
       <Socials socials={{ facebook, instagram, twitter, dribbble, linkedIn }} />
       <div className="text-sm">{headline}</div>
