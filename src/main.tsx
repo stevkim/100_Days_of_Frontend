@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import ProfileCard from "./challenge-components/1 - ProfileCard/ProfileCard.tsx";
+import AddToBag from "./challenge-components/2 - AddToBag/AddToBag.tsx";
 import "./index.css";
 import {
   RouterProvider,
@@ -26,7 +27,17 @@ const profileCardRoute = createRoute({
   component: ProfileCard,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, profileCardRoute]);
+const addToBagRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/add-to-bag",
+  component: AddToBag,
+});
+
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  profileCardRoute,
+  addToBagRoute,
+]);
 
 const router = createRouter({ routeTree });
 
