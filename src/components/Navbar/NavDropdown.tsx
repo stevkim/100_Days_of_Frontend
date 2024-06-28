@@ -25,7 +25,7 @@ const NavDropdown = ({ children }: Props) => {
       <div className="">
         <button
           onClick={(e) => handleToggle(e)}
-          className="flex flex-row items-center rounded-md px-2 py-1 hover:bg-gray-400"
+          className={`flex flex-row items-center rounded-md px-2 py-1 hover:bg-gray-400 ${open === "components" ? "bg-gray-300" : ""}`}
         >
           {children}{" "}
           <ChevronDown
