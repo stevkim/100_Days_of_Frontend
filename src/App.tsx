@@ -1,11 +1,13 @@
-import ProfileCard from "./components/ProfileCard/ProfileCard";
+import { Outlet } from "@tanstack/react-router";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <section className="flex items-center justify-center p-20">
-        <ProfileCard />
-      </section>
+      <Navbar />
+      <main className="flex items-center justify-center p-20">
+        <Outlet />
+      </main>
     </>
   );
 }

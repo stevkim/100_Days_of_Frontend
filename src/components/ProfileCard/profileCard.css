@@ -1,9 +1,0 @@
-@tailwind components;
-
-@layer components {
-  .profile-card {
-    background-image: url("@/assets/Backgrounds/ProfileCardWaves.svg");
-    background-size: 120%;
-    background-repeat: no-repeat;
-  }
-}
