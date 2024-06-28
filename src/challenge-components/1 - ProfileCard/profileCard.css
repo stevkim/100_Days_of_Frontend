@@ -2,7 +2,7 @@
 
 @layer components {
   .profile-card {
-    background-image: url("@/assets/Backgrounds/ProfileCardWaves.svg");
+    background-image: url("@/assets/1 - ProfileCard/Backgrounds/ProfileCardWaves.svg");
     background-size: 120%;
     background-repeat: no-repeat;
   }

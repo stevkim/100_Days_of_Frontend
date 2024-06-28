@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import ProfileCard from "./challenge-components/ProfileCard/ProfileCard.tsx";
+import ProfileCard from "./challenge-components/1 - ProfileCard/ProfileCard.tsx";
 import "./index.css";
 import {
   RouterProvider,

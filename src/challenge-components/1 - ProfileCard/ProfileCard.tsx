@@ -1,5 +1,4 @@
 import Socials from "./Socials";
-import Headline from "./Headline";
 import ButtonWrapper from "./ButtonWrapper";
 import ProfileImage from "./ProfileImage";
 import { User } from "./data";
@@ -26,12 +25,10 @@ const ProfileCard = () => {
         <h4 className="text-2xl tracking-[.5rem]">
           {firstName + " " + lastName}
         </h4>
-        <h6 aria-label="display name" className="text-sm text-gray-600">
-          @{displayName}
-        </h6>
+        <h6 className="text-sm text-gray-600">@{displayName}</h6>
       </div>
       <Socials socials={{ facebook, instagram, twitter, dribbble, linkedIn }} />
-      <Headline headline={headline} />
+      <div className="text-sm">{headline}</div>
       <ButtonWrapper />
     </div>
   );

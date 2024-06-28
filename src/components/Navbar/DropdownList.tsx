@@ -22,8 +22,8 @@ const DropdownList = () => {
         </span>
       </div>
       <div className="flex flex-row flex-wrap overflow-y-auto">
-        {NAVS.map((nav, index) => (
-          <DropdownItem key={nav.name} nav={nav} day={index + 1} />
+        {NAVS.map((nav) => (
+          <DropdownItem key={nav.name} nav={nav} />
         ))}
       </div>
     </motion.div>
