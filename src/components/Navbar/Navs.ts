@@ -9,4 +9,9 @@ export const NAVS = [
     name: "Add to Bag",
     link: "/add-to-bag",
   },
+  {
+    id: 3,
+    name: "Mobile Navigation",
+    link: "/mobile-nav",
+  },
 ];

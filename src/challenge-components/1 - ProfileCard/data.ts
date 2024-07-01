@@ -1,4 +1,4 @@
-import ProfileImage from "@/assets/1 - ProfileCard/headshot.jpg";
+import ProfileImage from "@/assets/headshot.jpg";
 
 export const User = {
   firstName: "Steven",
