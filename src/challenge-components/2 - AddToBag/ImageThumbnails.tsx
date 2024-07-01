@@ -8,7 +8,7 @@ const ImageThumbnails = ({ images, handleClick }: Props) => {
     <div className="flex h-full w-[15%] flex-col gap-2">
       {images.map((image) => {
         return (
-          <button onClick={() => handleClick(image)}>
+          <button key={image} onClick={() => handleClick(image)}>
             <img
               src={image}
               className="aspect-square w-full object-cover"

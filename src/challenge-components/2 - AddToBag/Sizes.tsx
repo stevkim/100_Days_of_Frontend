@@ -14,6 +14,7 @@ const Sizes = ({ sizes, activeSize, handleClick }: Props) => {
       {SIZES.map((size) => {
         return (
           <button
+            key={size}
             onClick={() => handleClick(size)}
             disabled={sizes[size] <= 0}
             className={`aspect-square w-[2.5rem] rounded-sm disabled:opacity-25 ${size === activeSize ? "bg-black text-white" : ""}`}
