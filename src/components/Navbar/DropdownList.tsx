@@ -6,7 +6,7 @@ import { Puzzle } from "lucide-react";
 const DropdownList = () => {
   return (
     <motion.div
-      className="z-1 fixed left-0 top-[50px] flex w-[100vw] flex-col rounded-md bg-gray-300 p-2 shadow-md"
+      className="fixed left-0 top-[50px] z-10 flex w-[100vw] flex-col rounded-md bg-gray-300 p-2 shadow-md"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0, opacity: 0 }}

@@ -8,7 +8,7 @@ interface Props {
 
 const RecipeHeader = ({ recipeName }: Props) => {
   return (
-    <div className="absolute z-10 flex h-[25vh] w-full items-end justify-center">
+    <div className="absolute z-[1] flex h-[25vh] w-full items-end justify-center">
       <div className="h-fit w-full bg-white p-8 md:w-[40%]">
         <div className="flex items-center">
           <StarRating rating={averageRating(RecipeReviewData.ratings)} />
