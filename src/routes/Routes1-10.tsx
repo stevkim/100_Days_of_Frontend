@@ -5,6 +5,7 @@ import ProfileCard from "@/challenge-components/1 - ProfileCard/ProfileCard";
 import AddToBag from "@/challenge-components/2 - AddToBag/AddToBag";
 import MobileNavigation from "@/challenge-components/3 - MobileNavigation/MobileNavigation";
 import ContactPage from "@/challenge-components/4 - ContactPage/ContactPage";
+import Recipe from "@/challenge-components/5 - Recipe/Recipe";
 
 // Challenge 1
 const profileCardRoute = createRoute({
@@ -34,9 +35,17 @@ const contactPageRoute = createRoute({
   component: ContactPage,
 });
 
+// Challenge 5
+const recipeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/recipe",
+  component: Recipe,
+});
+
 export default [
   profileCardRoute,
   addToBagRoute,
   mobileNavRoute,
   contactPageRoute,
+  recipeRoute,
 ];

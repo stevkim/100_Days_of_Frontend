@@ -19,4 +19,9 @@ export const NAVS = [
     name: "Contact Page",
     link: "/contact-page",
   },
+  {
+    id: 5,
+    name: "Recipe",
+    link: "/recipe",
+  },
 ];
