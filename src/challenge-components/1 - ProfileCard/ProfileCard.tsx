@@ -19,7 +19,7 @@ const ProfileCard = () => {
   } = User;
 
   return (
-    <div className="profile-card flex h-[30rem] w-[22rem] flex-col items-center justify-center gap-4 rounded-[2rem] border p-8 text-center">
+    <div className="profile-card mt-20 flex h-[30rem] w-[22rem] flex-col items-center justify-center gap-4 rounded-[2rem] border p-8 text-center">
       <ProfileImage image={image} />
       <div className="mt-auto">
         <h4 className="text-2xl tracking-[.5rem]">

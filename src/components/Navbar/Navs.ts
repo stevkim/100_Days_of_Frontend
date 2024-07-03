@@ -14,4 +14,9 @@ export const NAVS = [
     name: "Mobile Navigation",
     link: "/mobile-nav",
   },
+  {
+    id: 4,
+    name: "Contact Page",
+    link: "/contact-page",
+  },
 ];

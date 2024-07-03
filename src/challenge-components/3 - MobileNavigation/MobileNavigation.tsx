@@ -11,7 +11,7 @@ import BottomNavs from "./BottomNavs";
 
 const MobileNavigation = () => {
   return (
-    <section className="w-full rounded-2xl px-4 py-8 shadow-2xl md:w-[18rem]">
+    <section className="mt-20 w-full rounded-2xl px-4 py-8 shadow-2xl md:w-[18rem]">
       <ProfileSection user={UserInfo} />
       <Separator />
       <NavSection links={PrimaryNavLinks} />

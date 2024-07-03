@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .contact-page {
+    background-image: url("@/assets/4 - ContactPage/ContactPageBackground.png");
+    background-size: auto;
+    background-position: -100px -250px;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 50px);
+    height: auto;
+    background-color: #6f87ff5d;
+  }
+}

@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-10 flex h-[50px] w-[100vw] flex-row items-center px-[10%] shadow-lg">
+    <nav className="bg-white fixed top-0 z-10 flex h-[50px] w-[100vw] flex-row items-center px-[10%] shadow-lg">
       <NavContext.Provider value={{ open, setOpen }}>
         <Link
           to="/"
