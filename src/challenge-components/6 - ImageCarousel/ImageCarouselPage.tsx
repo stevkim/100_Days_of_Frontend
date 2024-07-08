@@ -1,5 +1,6 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import DisplayImage from "./DisplayImage";
+import ImageCarousel from "./ImageCarousel";
 import { IMAGES } from "./imageData";
 
 const ImageCarouselPage = () => {
@@ -33,10 +34,14 @@ const ImageCarouselPage = () => {
 
   return (
     <section className="h-page w-full bg-black">
-      Image Carounsel
       <DisplayImage
         display={currentImage}
         controls={{ incrementIndex, decrementIndex }}
+      />
+      <ImageCarousel
+        currentIndex={imageIndex}
+        handleClick={handleClick}
+        images={IMAGES}
       />
     </section>
   );

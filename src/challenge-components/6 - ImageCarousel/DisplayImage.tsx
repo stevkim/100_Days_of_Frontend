@@ -10,7 +10,7 @@ interface Props {
 
 const DisplayImage = ({ display, controls }: Props) => {
   return (
-    <div className="flex h-[70%] w-full">
+    <div className="flex h-[70%] w-full p-8">
       <button
         className="flex w-[10%] items-center justify-center text-white"
         onClick={controls.decrementIndex}
