@@ -24,4 +24,9 @@ export const NAVS = [
     name: "Recipe",
     link: "/recipe",
   },
+  {
+    id: 6,
+    name: "Image Carousel",
+    link: "/image-carousel",
+  },
 ];

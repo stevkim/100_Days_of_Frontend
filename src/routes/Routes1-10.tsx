@@ -6,6 +6,7 @@ import AddToBag from "@/challenge-components/2 - AddToBag/AddToBag";
 import MobileNavigation from "@/challenge-components/3 - MobileNavigation/MobileNavigation";
 import ContactPage from "@/challenge-components/4 - ContactPage/ContactPage";
 import Recipe from "@/challenge-components/5 - Recipe/Recipe";
+import ImageCarousel from "@/challenge-components/6 - ImageCarousel/ImageCarousel";
 
 // Challenge 1
 const profileCardRoute = createRoute({
@@ -42,10 +43,18 @@ const recipeRoute = createRoute({
   component: Recipe,
 });
 
+// Challenge 6
+const imageCarouselRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/image-carousel",
+  component: ImageCarousel,
+});
+
 export default [
   profileCardRoute,
   addToBagRoute,
   mobileNavRoute,
   contactPageRoute,
   recipeRoute,
+  imageCarouselRoute,
 ];

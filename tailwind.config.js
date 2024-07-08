@@ -8,6 +8,9 @@ export default {
         "secondary-blue": "#0066FF",
         muted: "#cdcdca",
       },
+      height: {
+        page: "calc(100vh - 50px)",
+      },
     },
   },
   plugins: [],
