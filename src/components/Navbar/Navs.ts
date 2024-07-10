@@ -29,4 +29,9 @@ export const NAVS = [
     name: "Image Carousel",
     link: "/image-carousel",
   },
+  {
+    id: 7,
+    name: "Create Account",
+    link: "/create-account",
+  },
 ];
