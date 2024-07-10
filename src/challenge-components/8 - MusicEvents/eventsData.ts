@@ -1,4 +1,4 @@
-export type Event = {
+export type TEvent = {
   name: string;
   artist: string;
   venue: string;
@@ -9,7 +9,7 @@ export type Event = {
   availableTickets: number;
 };
 
-export const Events: Event[] = [
+export const EventsData: TEvent[] = [
   {
     name: "A Day to Remember",
     artist: "A Day to Remember",
