@@ -34,4 +34,9 @@ export const NAVS = [
     name: "Create Account",
     link: "/create-account",
   },
+  {
+    id: 8,
+    name: "Music Events",
+    link: "/music-events",
+  },
 ];

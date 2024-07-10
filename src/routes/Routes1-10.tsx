@@ -8,6 +8,7 @@ import ContactPage from "@/challenge-components/4 - ContactPage/ContactPage";
 import Recipe from "@/challenge-components/5 - Recipe/Recipe";
 import ImageCarouselPage from "@/challenge-components/6 - ImageCarousel/ImageCarouselPage";
 import CreateAccountPage from "@/challenge-components/7 - CreateAccount/CreateAccountPage";
+import MusicEventsPage from "@/challenge-components/8 - MusicEvents/MusicEventsPage";
 
 // Challenge 1
 const profileCardRoute = createRoute({
@@ -58,6 +59,13 @@ const createAccountRoute = createRoute({
   component: CreateAccountPage,
 });
 
+// Challenge 8
+const musicEventsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/music-events",
+  component: MusicEventsPage,
+});
+
 export default [
   profileCardRoute,
   addToBagRoute,
@@ -66,4 +74,5 @@ export default [
   recipeRoute,
   imageCarouselRoute,
   createAccountRoute,
+  musicEventsRoute,
 ];
