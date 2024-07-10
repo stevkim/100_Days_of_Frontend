@@ -1,0 +1,12 @@
+@tailwind components;
+
+@layer components {
+  .page-bg {
+    background-image: url("@/assets/7 - CreateAccount/createAccount-bg.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 50px);
+    height: auto;
+    background-color: #6f87ff5d;
+  }
+}
