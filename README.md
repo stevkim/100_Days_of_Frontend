@@ -26,3 +26,20 @@
 ![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)
 ![Zod](https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&logo=zod&logoColor=white)
 ![Context-API](https://img.shields.io/badge/Context--Api-000000?style=for-the-badge&logo=react)
+
+## Challenge Timeline
+<span id='tech'></span>
+
+- [x] ~~Day 1 - Profile Card~~
+- [x] ~~Day 2 - Add to Bag~~
+- [x] ~~Day 3 - Mobile Navigation~~
+- [x] ~~Day 4 - Contact Page~~
+- [x] ~~Day 5 - Recipe Page~~
+- [x] ~~Day 6 - Image Carousel~~
+- [x] ~~Day 7 - Create Account Page~~ 
+- [x] ~~Day 8 - Music Events Page~~ 
+- [x] ~~Day 9 - Password Generator~~ 
+
+
+
+
