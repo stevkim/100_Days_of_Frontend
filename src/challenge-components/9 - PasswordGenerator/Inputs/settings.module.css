@@ -1,0 +1,35 @@
+.toggleInput {
+  position: relative;
+  background: rgb(143, 206, 255);
+  width: 2rem;
+  height: 1.1rem;
+  border-radius: 20px;
+  padding: calc(1rem * 0.125) calc(1rem * 0.3125);
+}
+.toggleInput input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  background: rgb(176, 174, 174);
+  top: calc(1rem * 0.125);
+  left: calc(1rem * 0.125);
+  right: 0;
+  bottom: 0;
+  width: calc(1rem * 0.875);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: white;
+  transform: translateX(calc(1rem * 0.875));
+}
+
+input:checked + .toggleInput {
+  opacity: 1;
+}
