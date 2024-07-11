@@ -39,4 +39,9 @@ export const NAVS = [
     name: "Music Events",
     link: "/music-events",
   },
+  {
+    id: 9,
+    name: "Password Generator",
+    link: "/password-generator",
+  },
 ];

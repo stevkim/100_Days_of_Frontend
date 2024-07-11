@@ -9,6 +9,7 @@ import Recipe from "@/challenge-components/5 - Recipe/Recipe";
 import ImageCarouselPage from "@/challenge-components/6 - ImageCarousel/ImageCarouselPage";
 import CreateAccountPage from "@/challenge-components/7 - CreateAccount/CreateAccountPage";
 import MusicEventsPage from "@/challenge-components/8 - MusicEvents/MusicEventsPage";
+import PasswordGenerator from "@/challenge-components/9 - PasswordGenerator/PasswordGenerator";
 
 // Challenge 1
 const profileCardRoute = createRoute({
@@ -66,6 +67,13 @@ const musicEventsRoute = createRoute({
   component: MusicEventsPage,
 });
 
+// Challenge 9
+const passwwordGeneratorRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/password-generator",
+  component: PasswordGenerator,
+});
+
 export default [
   profileCardRoute,
   addToBagRoute,
@@ -75,4 +83,5 @@ export default [
   imageCarouselRoute,
   createAccountRoute,
   musicEventsRoute,
+  passwwordGeneratorRoute,
 ];
