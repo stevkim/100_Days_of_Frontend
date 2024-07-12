@@ -30,15 +30,15 @@
 ## Challenge Timeline
 <span id='tech'></span>
 
-- [x] ~~Day 1 - Profile Card~~
-- [x] ~~Day 2 - Add to Bag~~
-- [x] ~~Day 3 - Mobile Navigation~~
-- [x] ~~Day 4 - Contact Page~~
-- [x] ~~Day 5 - Recipe Page~~
-- [x] ~~Day 6 - Image Carousel~~
-- [x] ~~Day 7 - Create Account Page~~ 
-- [x] ~~Day 8 - Music Events Page~~ 
-- [x] ~~Day 9 - Password Generator~~ 
+- [x] ~~Day 1 - Profile Card~~ 6/27
+- [x] ~~Day 2 - Add to Bag~~ 6/28
+- [x] ~~Day 3 - Mobile Navigation~~ 7/1
+- [x] ~~Day 4 - Contact Page~~ 7/2
+- [x] ~~Day 5 - Recipe Page~~ 7/3
+- [x] ~~Day 6 - Image Carousel~~ 7/8
+- [x] ~~Day 7 - Create Account Page~~ 7/9
+- [x] ~~Day 8 - Music Events Page~~ 7/10
+- [x] ~~Day 9 - Password Generator~~ 7/11
 
 
 
