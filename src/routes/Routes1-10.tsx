@@ -11,6 +11,8 @@ import CreateAccountPage from "@/challenge-components/7 - CreateAccount/CreateAc
 import MusicEventsPage from "@/challenge-components/8 - MusicEvents/MusicEventsPage";
 import PasswordGenerator from "@/challenge-components/9 - PasswordGenerator/PasswordGenerator";
 import SignupPage from "@/challenge-components/10 - SignupPage/SignupPage";
+import SignupIndexPage from "@/challenge-components/10 - SignupPage/SignupIndexPage";
+import SignupEmailPage from "@/challenge-components/10 - SignupPage/SignupEmailPage";
 
 // Challenge 1
 const profileCardRoute = createRoute({
@@ -75,11 +77,23 @@ const passwwordGeneratorRoute = createRoute({
   component: PasswordGenerator,
 });
 
-// Challenge 9
+// Challenge 10
 const signUpPageRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/sign-up",
   component: SignupPage,
+});
+
+const signUpIndexRoute = createRoute({
+  getParentRoute: () => signUpPageRoute,
+  path: "/",
+  component: SignupIndexPage,
+});
+
+const signUpEmailRoute = createRoute({
+  getParentRoute: () => signUpPageRoute,
+  path: "/email",
+  component: SignupEmailPage,
 });
 
 export default [
@@ -92,5 +106,5 @@ export default [
   createAccountRoute,
   musicEventsRoute,
   passwwordGeneratorRoute,
-  signUpPageRoute,
+  signUpPageRoute.addChildren([signUpIndexRoute, signUpEmailRoute]),
 ];
