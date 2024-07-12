@@ -44,4 +44,9 @@ export const NAVS = [
     name: "Password Generator",
     link: "/password-generator",
   },
+  {
+    id: 10,
+    name: "Sign-up Page",
+    link: "/sign-up",
+  },
 ];
