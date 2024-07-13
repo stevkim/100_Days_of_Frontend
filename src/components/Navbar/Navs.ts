@@ -49,4 +49,9 @@ export const NAVS = [
     name: "Sign-up Page",
     link: "/sign-up",
   },
+  {
+    id: 11,
+    name: "Hotel Booking",
+    link: "/hotel-booking",
+  },
 ];

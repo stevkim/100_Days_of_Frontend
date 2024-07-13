@@ -9,6 +9,7 @@ import {
   createRouter,
 } from "@tanstack/react-router";
 import Routes1_10 from "@/routes/Routes1-10.tsx";
+import Routes11_20 from "@/routes/Routes11-20.tsx";
 
 export const rootRoute = createRootRoute({
   component: App,
@@ -20,7 +21,11 @@ const indexRoute = createRoute({
   component: () => <div>home</div>,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, ...Routes1_10]);
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  ...Routes1_10,
+  ...Routes11_20,
+]);
 
 const router = createRouter({ routeTree });
 
