@@ -1,5 +1,5 @@
 import { useMemo, useContext } from "react";
-import { DateRangeContext } from "./DatePicker";
+import { DateRangeContext } from "../DatePicker";
 
 interface DayItemProps {
   date: Date;
@@ -13,7 +13,7 @@ const DayItem = ({ date }: DayItemProps) => {
     const right = end?.getTime();
 
     if (current === left || current === right) {
-      return "bg-blue-600";
+      return "bg-blue-600 text-white";
     } else if (left && right && current > left && current < right) {
       return "bg-blue-400";
     } else {

@@ -1,9 +1,10 @@
-import CalendarDayList from "./CalendarDayList";
-import CalendarHeader from "./CalendarHeader";
+import CalendarDayList from "./components/CalendarDayList";
+import CalendarHeader from "./components/CalendarHeader";
 import { tw } from "@/utils/twMerge";
-import useDateRange from "../../hooks/useDateRange";
-import useDate from "../../hooks/useDate";
+import useDateRange from "./hooks/useDateRange";
+import useDate from "./hooks/useDate";
 import { createContext, useMemo } from "react";
+import "./DatePicker.css";
 
 interface DatePickerProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -15,6 +16,11 @@ export const DateRangeContext = createContext<{
   updateRange: (e: React.MouseEvent<HTMLDivElement>) => void;
 }>({ start: null, end: null, updateRange: () => {} });
 
+export const DateContext = createContext<{
+  date: { year: number; month: number };
+  setDate: (input: { year: number; month: number }) => void;
+}>({ date: { year: 0, month: 0 }, setDate: () => {} });
+
 const DatePicker = ({ className, ...props }: DatePickerProps) => {
   const {
     dates: { start, end },
@@ -22,8 +28,14 @@ const DatePicker = ({ className, ...props }: DatePickerProps) => {
     setStartDate,
     setEndDate,
   } = useDateRange();
-  const { currentDates, totalDays, firstDay, incrementMonth, decrementMonth } =
-    useDate(resetDateRange);
+  const {
+    currentDates,
+    totalDays,
+    firstDay,
+    incrementMonth,
+    decrementMonth,
+    setCurrentDates,
+  } = useDate(resetDateRange);
 
   const daysList = useMemo(() => {
     const DAYLIST = [];
@@ -72,18 +84,23 @@ const DatePicker = ({ className, ...props }: DatePickerProps) => {
     }
   };
 
+  const selectMonthYear = (input: { month: number; year: number }) => {
+    resetDateRange();
+    setCurrentDates(input);
+  };
+
   return (
     <div className={tw("", className)} {...props}>
-      <CalendarHeader dates={currentDates} />
+      <DateContext.Provider
+        value={{ date: currentDates, setDate: selectMonthYear }}
+      >
+        <CalendarHeader update={{ incrementMonth, decrementMonth }} />
+      </DateContext.Provider>
       <DateRangeContext.Provider
         value={{ start, end, updateRange: handleClick }}
       >
         <CalendarDayList list={daysList} />
       </DateRangeContext.Provider>
-      <div className="flex justify-between">
-        <button onClick={decrementMonth}>{"<"}</button>
-        <button onClick={incrementMonth}>{">"}</button>
-      </div>
     </div>
   );
 };

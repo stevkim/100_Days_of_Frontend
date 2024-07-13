@@ -49,7 +49,14 @@ const useDate = (resetDateRange: () => void) => {
     resetDateRange();
   };
 
-  return { firstDay, totalDays, incrementMonth, decrementMonth, currentDates };
+  return {
+    firstDay,
+    totalDays,
+    incrementMonth,
+    decrementMonth,
+    currentDates,
+    setCurrentDates,
+  };
 };
 
 export default useDate;
