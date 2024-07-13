@@ -52,8 +52,7 @@ const useDate = (resetDateRange: () => void) => {
   return {
     firstDay,
     totalDays,
-    incrementMonth,
-    decrementMonth,
+    updateMonth: { incrementMonth, decrementMonth },
     currentDates,
     setCurrentDates,
   };

@@ -8,6 +8,35 @@ const useDateRange = () => {
     end: null,
   });
 
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const date = new Date(e.currentTarget.dataset.value!);
+
+    const currentTime = date.getTime();
+    const startTime = startDate?.getTime();
+    const endTime = endDate?.getTime();
+
+    if (!startDate || (startDate && currentTime < startTime!)) {
+      setStartDate(date);
+    } else if (startDate && !endDate && currentTime > startTime!) {
+      setEndDate(date);
+    }
+
+    if (startDate && endDate) {
+      if (currentTime > endTime!) {
+        setEndDate(date);
+      } else {
+        const left = Math.abs(currentTime - startTime!);
+        const right = Math.abs(currentTime - endTime!);
+
+        if (left < right) {
+          setStartDate(date);
+        } else {
+          setEndDate(date);
+        }
+      }
+    }
+  };
+
   const resetDateRange = () => {
     setStartDate(null);
     setEndDate(null);
@@ -20,7 +49,7 @@ const useDateRange = () => {
     });
   }, [startDate, endDate]);
 
-  return { dates, resetDateRange, setStartDate, setEndDate };
+  return { dates, resetDateRange, handleClick };
 };
 
 export default useDateRange;
