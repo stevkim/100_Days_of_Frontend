@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 
-const useDateRange = () => {
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
+const useDateRange = (start: Date | null, end: Date | null) => {
+  const [startDate, setStartDate] = useState<Date | null>(start);
+  const [endDate, setEndDate] = useState<Date | null>(end);
   const [dates, setDates] = useState<{ start: Date | null; end: Date | null }>({
     start: null,
     end: null,
   });
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
     const date = new Date(e.currentTarget.dataset.value!);
 
     const currentTime = date.getTime();

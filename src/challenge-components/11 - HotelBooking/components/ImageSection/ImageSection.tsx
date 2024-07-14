@@ -24,7 +24,7 @@ const ImageSection = ({ images, location }: ImageSectionProps) => {
   };
 
   return (
-    <div className="flex h-full w-full flex-col gap-2 md:w-[55%]">
+    <div className="flex h-full max-h-[400px] w-full flex-col gap-2 md:max-h-[600px] md:w-[55%]">
       <DisplayImage image={displayImage} location={location} />
       <ImageList list={remainingImages} handleClick={handleClick} />
     </div>

@@ -6,7 +6,7 @@ interface DisplayImageProps {
 
 const DisplayImage = ({ image, location }: DisplayImageProps) => {
   return (
-    <div className="relative h-[70%] w-full">
+    <div className="relative h-[70%] w-full overflow-hidden">
       <img
         src={image}
         alt={image}

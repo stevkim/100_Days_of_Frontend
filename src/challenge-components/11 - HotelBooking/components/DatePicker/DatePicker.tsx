@@ -7,9 +7,11 @@ import { createContext, useMemo, useEffect } from "react";
 import { getDayList } from "./lib/getDayList";
 import "./DatePicker.css";
 
-interface DatePickerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface DatePickerProps {
   className?: string;
-  onChange?: (...inputs: unknown[]) => void;
+  startDate?: Date | null;
+  endDate?: Date | null;
+  onChange?: (e: { start: Date | null; end: Date | null }) => void;
 }
 
 export const DateRangeContext = createContext<{
@@ -23,12 +25,18 @@ export const DateContext = createContext<{
   setDate: (input: { year: number; month: number }) => void;
 }>({ date: { year: 0, month: 0 }, setDate: () => {} });
 
-const DatePicker = ({ onChange, className, ...props }: DatePickerProps) => {
+const DatePicker = ({
+  startDate = null,
+  endDate = null,
+  onChange,
+  className,
+  ...props
+}: DatePickerProps) => {
   const {
     dates: { start, end },
     resetDateRange,
     handleClick,
-  } = useDateRange();
+  } = useDateRange(startDate, endDate);
   const { currentDates, totalDays, firstDay, updateMonth, setCurrentDates } =
     useDate(resetDateRange);
 
@@ -49,7 +57,10 @@ const DatePicker = ({ onChange, className, ...props }: DatePickerProps) => {
   }, [start, end, onChange]);
 
   return (
-    <div className={tw("", className)} {...props}>
+    <div
+      className={tw("datePicker rounded-md bg-white p-2", className)}
+      {...props}
+    >
       <DateContext.Provider
         value={{ date: currentDates, setDate: selectMonthYear }}
       >
