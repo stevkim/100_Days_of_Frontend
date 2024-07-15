@@ -10,7 +10,7 @@ const DisplayImage = ({ image, location }: DisplayImageProps) => {
       <img
         src={image}
         alt={image}
-        className="pointer-events-none h-full w-full rounded-sm object-cover shadow-sm"
+        className="pointer-events-none aspect-video h-full rounded-sm object-cover shadow-sm"
       />
       <div className="absolute bottom-3 left-3 flex flex-col font-bold text-white">
         <span className="text-xl">{location.name}</span>
