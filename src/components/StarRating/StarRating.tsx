@@ -14,17 +14,24 @@ const StarRating = ({ rating }: Props) => {
         className={`absolute flex flex-row overflow-hidden`}
         style={{ width: `${convertRating(rating)}%` }}
       >
-        {totalStars.map(() => {
+        {totalStars.map((_, index) => {
           return (
-            <div>
-              <Star size={16} fill="#e0d900" color="#e0d900" />
+            <div key={"colored-star " + index}>
+              <Star size={"1em"} fill="#e0d900" color="#e0d900" />
             </div>
           );
         })}
       </div>
       <div className="flex flex-row">
-        {totalStars.map(() => {
-          return <Star size={16} color="#e3e3e3" fill="#e3e3e3" />;
+        {totalStars.map((_, index) => {
+          return (
+            <Star
+              key={"gray-star " + index}
+              size={"1em"}
+              color="#e3e3e3"
+              fill="#e3e3e3"
+            />
+          );
         })}
       </div>
     </div>
