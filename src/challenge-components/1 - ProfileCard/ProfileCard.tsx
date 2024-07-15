@@ -19,18 +19,22 @@ const ProfileCard = () => {
   } = User;
 
   return (
-    <div className="profile-card mt-20 flex h-[30rem] w-[22rem] flex-col items-center justify-center gap-4 rounded-[2rem] border p-8 text-center">
-      <ProfileImage image={image} />
-      <div className="mt-auto">
-        <h4 className="text-2xl tracking-[.5rem]">
-          {firstName + " " + lastName}
-        </h4>
-        <h6 className="text-gray-500 text-sm">@{displayName}</h6>
+    <section className="flex h-page w-full items-center justify-center bg-gray-200">
+      <div className="profile-card flex h-[30rem] w-[22rem] flex-col items-center justify-center gap-4 rounded-[2rem] border bg-white p-8 text-center shadow-lg">
+        <ProfileImage image={image} />
+        <div className="mt-auto">
+          <h4 className="text-2xl tracking-[.5rem]">
+            {firstName + " " + lastName}
+          </h4>
+          <h6 className="text-sm text-gray-500">@{displayName}</h6>
+        </div>
+        <Socials
+          socials={{ facebook, instagram, twitter, dribbble, linkedIn }}
+        />
+        <div className="text-sm">{headline}</div>
+        <ButtonWrapper />
       </div>
-      <Socials socials={{ facebook, instagram, twitter, dribbble, linkedIn }} />
-      <div className="text-sm">{headline}</div>
-      <ButtonWrapper />
-    </div>
+    </section>
   );
 };
 

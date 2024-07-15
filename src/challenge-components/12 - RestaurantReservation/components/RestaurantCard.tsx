@@ -11,7 +11,7 @@ const RestaurantCard = () => {
   };
 
   return (
-    <div className="relative flex h-full max-h-[500px] w-full max-w-[320px] flex-col overflow-hidden rounded-lg shadow-lg">
+    <section className="relative flex h-full max-h-[500px] w-full max-w-[320px] flex-col overflow-hidden rounded-lg bg-white shadow-lg">
       <ImageSection list={images} />
       <CardContent data={restaurantInfo} />
       <button
@@ -20,7 +20,7 @@ const RestaurantCard = () => {
       >
         Make a Reservation
       </button>
-    </div>
+    </section>
   );
 };
 

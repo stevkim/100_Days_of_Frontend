@@ -11,13 +11,15 @@ import BottomNavs from "./BottomNavs";
 
 const MobileNavigation = () => {
   return (
-    <section className="mt-20 w-full rounded-2xl px-4 py-8 shadow-2xl md:w-[18rem]">
-      <ProfileSection user={UserInfo} />
-      <Separator />
-      <NavSection links={PrimaryNavLinks} />
-      <Separator />
-      <NavSection links={SecondaryNavLinks} />
-      <BottomNavs links={BottomNavLinks} />
+    <section className="flex h-page w-full flex-col items-center justify-center bg-gray-200">
+      <div className="w-full rounded-2xl bg-white px-4 py-8 shadow-2xl md:w-[18rem]">
+        <ProfileSection user={UserInfo} />
+        <Separator />
+        <NavSection links={PrimaryNavLinks} />
+        <Separator />
+        <NavSection links={SecondaryNavLinks} />
+        <BottomNavs links={BottomNavLinks} />
+      </div>
     </section>
   );
 };
