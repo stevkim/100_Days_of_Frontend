@@ -55,8 +55,13 @@ export const NAVS = [
     link: "/hotel-booking",
   },
   {
-    id: 11,
+    id: 12,
     name: "Restaurant Reservation",
     link: "/restaurant-reservation",
+  },
+  {
+    id: 13,
+    name: "Task Board",
+    link: "/task-board",
   },
 ];
