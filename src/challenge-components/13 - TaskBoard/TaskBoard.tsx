@@ -1,4 +1,19 @@
-import { useState, useRef } from "react";
+import { useState, useRef, createContext } from "react";
+import SubBoard from "./components/SubBoard";
+
+interface CustomDragEvents {
+  handleDragStart: (e: React.DragEvent<HTMLDivElement>) => void;
+  handleDragEnd: () => void;
+  handleDragOver: (e: React.DragEvent<HTMLDivElement>) => void;
+  handleDrop: (e: React.DragEvent<HTMLDivElement>) => void;
+}
+
+export const DragEventContext = createContext<CustomDragEvents>({
+  handleDragStart: () => {},
+  handleDragEnd: () => {},
+  handleDragOver: () => {},
+  handleDrop: () => {},
+});
 
 const TaskBoard = () => {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -20,13 +35,12 @@ const TaskBoard = () => {
     draggedRef.current = null;
   };
 
-  const dragOver = (e: React.DragEvent<HTMLDivElement>) => {
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
 
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    console.log(e.currentTarget.id);
 
     const newList = tasks.map((task) => {
       if (task === draggedRef.current?.innerText) {
@@ -42,82 +56,96 @@ const TaskBoard = () => {
   };
 
   return (
-    <section className="relative flex h-page w-full flex-row items-center justify-center gap-10">
-      <div
-        id="board-1"
-        className="h-[300px] w-[200px] border border-blue-200"
-        onDragOver={dragOver}
-        onDrop={handleDrop}
+    <section className="relative flex h-page w-full flex-col p-10">
+      <h1 className="text-2xl font-bold">Task Board</h1>
+      <DragEventContext.Provider
+        value={{ handleDragStart, handleDragEnd, handleDragOver, handleDrop }}
       >
-        <div className="flex justify-evenly">
-          <h4>Board 1</h4>
-          <button onClick={() => handleAdd("1", `testing ${Math.random()}`)}>
-            +
-          </button>
-        </div>
-        {one.map((text, index) => {
-          return (
-            <div
-              draggable="true"
-              key={"board-one" + text + index}
-              onDragStart={handleDragStart}
-              onDragEnd={handleDragEnd}
-            >
-              {text}
+        <div className="flex flex-row items-center justify-center gap-10">
+          <SubBoard id={"todo"} name={"To do"}></SubBoard>
+          <div
+            id="board-1"
+            className="h-[300px] w-[200px] border border-blue-200"
+            onDragOver={handleDragOver}
+            onDrop={handleDrop}
+          >
+            <div className="flex justify-evenly">
+              <h4>Board 1</h4>
+              <button
+                onClick={() => handleAdd("1", `testing ${Math.random()}`)}
+              >
+                +
+              </button>
             </div>
-          );
-        })}
-      </div>
-      <div
-        id="board-2"
-        className="h-[300px] w-[200px] border border-blue-200"
-        onDragOver={dragOver}
-        onDrop={handleDrop}
-      >
-        <div className="flex justify-evenly">
-          <h4>Board 2</h4>
-          <button onClick={() => handleAdd("2", `testing ${Math.random()}`)}>
-            +
-          </button>
-        </div>
-        {two.map((text, index) => {
-          return (
-            <div
-              draggable="true"
-              key={"board-two" + text + index}
-              onDragStart={handleDragStart}
-              onDragEnd={handleDragEnd}
-            >
-              {text}
+            {one.map((text, index) => {
+              return (
+                <div
+                  draggable="true"
+                  key={"board-one" + text + index}
+                  onDragStart={handleDragStart}
+                  onDragEnd={handleDragEnd}
+                >
+                  {text}
+                </div>
+              );
+            })}
+          </div>
+          <div
+            id="board-2"
+            className="h-[300px] w-[200px] border border-blue-200"
+            onDragOver={handleDragOver}
+            onDrop={handleDrop}
+          >
+            <div className="flex justify-evenly">
+              <h4>Board 2</h4>
+              <button
+                onClick={() => handleAdd("2", `testing ${Math.random()}`)}
+              >
+                +
+              </button>
             </div>
-          );
-        })}
-      </div>
-      <div
-        id="board-3"
-        className="h-[300px] w-[200px] border border-blue-200"
-        onDragOver={dragOver}
-        onDrop={handleDrop}
-      >
-        <div className="flex justify-evenly">
-          <h4>Board 3</h4>
-          <button onClick={() => handleAdd("3", `testing ${Math.random()}`)}>
-            +
-          </button>
-        </div>
-        {three.map((text, index) => {
-          return (
-            <div
-              draggable="true"
-              key={"board-three" + text + index}
-              onDragStart={handleDragStart}
-              onDragEnd={handleDragEnd}
-            >
-              {text}
+            {two.map((text, index) => {
+              return (
+                <div
+                  draggable="true"
+                  key={"board-two" + text + index}
+                  onDragStart={handleDragStart}
+                  onDragEnd={handleDragEnd}
+                >
+                  {text}
+                </div>
+              );
+            })}
+          </div>
+          <div
+            id="board-3"
+            className="h-[300px] w-[200px] border border-blue-200"
+            onDragOver={handleDragOver}
+            onDrop={handleDrop}
+          >
+            <div className="flex justify-evenly">
+              <h4>Board 3</h4>
+              <button
+                onClick={() => handleAdd("3", `testing ${Math.random()}`)}
+              >
+                +
+              </button>
             </div>
-          );
-        })}
-      </div>
+            {three.map((text, index) => {
+              return (
+                <div
+                  draggable="true"
+                  key={"board-three" + text + index}
+                  onDragStart={handleDragStart}
+                  onDragEnd={handleDragEnd}
+                >
+                  {text}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </DragEventContext.Provider>
     </section>
   );
 };
