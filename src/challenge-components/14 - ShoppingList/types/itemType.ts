@@ -7,4 +7,5 @@ export type TItem = {
   price: number;
   image: string;
   quantity: number;
+  totalQuantity: number;
 };

@@ -10,7 +10,8 @@ export const ITEMS: TItem[] = [
     name: "Teal Crewneck T-shirt",
     price: 24.99,
     image: tealshirt,
-    quantity: 4,
+    quantity: 1,
+    totalQuantity: 4,
     size: "medium",
   },
   {
@@ -18,7 +19,8 @@ export const ITEMS: TItem[] = [
     name: "White Athletic Sweater",
     price: 44.99,
     image: whitecrew,
-    quantity: 2,
+    quantity: 1,
+    totalQuantity: 3,
     size: "medium",
   },
   {
@@ -26,7 +28,8 @@ export const ITEMS: TItem[] = [
     name: "Skull Peace T-shirt",
     price: 26.99,
     image: peaceshirt,
-    quantity: 4,
+    quantity: 1,
+    totalQuantity: 4,
     size: "small",
   },
   {
@@ -35,6 +38,7 @@ export const ITEMS: TItem[] = [
     price: 55,
     image: squadhoodie,
     quantity: 1,
+    totalQuantity: 1,
     size: "medium",
   },
 ];
