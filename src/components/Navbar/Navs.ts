@@ -64,4 +64,9 @@ export const NAVS = [
     name: "Task Board",
     link: "/task-board",
   },
+  {
+    id: 14,
+    name: "Shopping List",
+    link: "/shopping-list",
+  },
 ];
