@@ -6,21 +6,22 @@ interface SubBoardProps {
   id: string;
   name: string;
   children?: React.ReactNode;
+  openModal: (type: string) => void;
 }
 
-const SubBoard = ({ id, name, children }: SubBoardProps) => {
+const SubBoard = ({ id, name, children, openModal }: SubBoardProps) => {
   const { handleDragOver, handleDrop } = useContext(DragEventContext);
 
   return (
     <div
       id={id}
-      className="h-full w-[25%] max-w-[400px] border p-4"
+      className="flex h-full w-[25%] max-w-[400px] flex-col gap-4 p-4"
       onDragOver={handleDragOver}
       onDrop={handleDrop}
     >
       <div className="flex items-center">
-        <span className="text-lg font-semibold">{name}</span>
-        <button role="button" className="ml-2">
+        <span className="text-xl font-semibold">{name}</span>
+        <button role="button" className="ml-2" onClick={() => openModal(id)}>
           <Plus size={16} />
         </button>
       </div>
