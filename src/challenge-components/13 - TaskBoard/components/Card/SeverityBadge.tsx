@@ -18,7 +18,7 @@ const SeverityBadge = ({ severity }: SeverityBadgeProps) => {
 
   return (
     <div
-      className={`w-fit rounded-lg px-1 py-[.1rem] text-xs text-white ${styles[severity]}`}
+      className={`w-fit rounded-md px-1 py-[.1rem] text-xs text-white ${styles[severity]}`}
     >
       {severity.toUpperCase()}
     </div>

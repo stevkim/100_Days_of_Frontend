@@ -2,7 +2,7 @@ import type { TTask } from "../types/taskType";
 import { useContext } from "react";
 import { DragEventContext } from "../TaskBoard";
 import SeverityBadge from "./Card/SeverityBadge";
-import { formatDate } from "../lib/formatDate";
+import { formatDate } from "../lib";
 import AssignedUserList from "./Card/AssignedUserList";
 
 interface TaskCardProps {
@@ -26,9 +26,15 @@ const TaskCard = ({ task }: TaskCardProps) => {
           {formatDate(task.date!)}
         </span>
       </div>
-      {task.image ? <img src={task.image} alt={task.taskTitle} /> : null}
+      {task.image ? (
+        <img
+          className="pointer-events-none aspect-video w-full rounded-md shadow-lg"
+          src={task.image}
+          alt={task.taskTitle}
+        />
+      ) : null}
       <h4 className="text-xl font-semibold">{task.taskTitle}</h4>
-      <p>{task.taskContent}</p>
+      <p className="w-full">{task.taskContent}</p>
       <AssignedUserList list={task.users || []} />
     </div>
   );
