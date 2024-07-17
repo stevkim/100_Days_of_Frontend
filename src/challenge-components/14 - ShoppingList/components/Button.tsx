@@ -18,7 +18,7 @@ const Button = ({
 }: ButtonProps) => {
   const buttonVariants: buttonVariantType = {
     icon: "h-5 aspect-square rounded-sm disabled:text-muted",
-    default: "bg-black text-white py-2",
+    default: "bg-black text-white py-2 rounded-md hover:bg-black/75",
   };
 
   return (

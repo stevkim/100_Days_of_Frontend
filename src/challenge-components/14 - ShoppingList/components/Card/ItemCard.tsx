@@ -1,5 +1,5 @@
-import type { TItem } from "../types/itemType";
-import CardContent from "./Card/CardContent";
+import type { TItem } from "../../types/itemType";
+import CardContent from "./CardContent";
 
 interface ItemCardProps {
   item: TItem;
