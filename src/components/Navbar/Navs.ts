@@ -72,6 +72,6 @@ export const NAVS = [
   {
     id: 15,
     name: "Notifications Page",
-    link: "/notifications",
+    link: "/notifications-page",
   },
 ];

@@ -1,14 +1,14 @@
 import { Bell, Dot } from "lucide-react";
 
-interface NotificationIconProps {
+interface BellIconProps {
   empty: boolean;
   toggleOpen: () => void;
 }
 
-const NotificationIcon = ({ empty, toggleOpen }: NotificationIconProps) => {
+const BellIcon = ({ empty, toggleOpen }: BellIconProps) => {
   return (
     <button
-      className={`relative h-fit w-fit rounded-full bg-white p-1 ${empty ? "text-gray-400" : "text-black"}`}
+      className={`relative ml-auto h-fit w-fit rounded-full bg-white p-1 ${empty ? "text-gray-400" : "text-black"}`}
       onClick={toggleOpen}
     >
       <Bell size={16} />
@@ -22,4 +22,4 @@ const NotificationIcon = ({ empty, toggleOpen }: NotificationIconProps) => {
   );
 };
 
-export default NotificationIcon;
+export default BellIcon;
