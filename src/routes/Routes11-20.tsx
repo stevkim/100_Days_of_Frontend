@@ -5,6 +5,7 @@ import HotelBooking from "@/challenge-components/11 - HotelBooking/HotelBooking"
 import RestaurantReservationPage from "@/challenge-components/12 - RestaurantReservation/RestaurantReservartionPage";
 import TaskBoard from "@/challenge-components/13 - TaskBoard/TaskBoard";
 import ShoppingList from "@/challenge-components/14 - ShoppingList/ShoppingList";
+import Notifications from "@/challenge-components/15 - Notifications/Notifications";
 
 // Challenge 11
 const hotelBookingRoute = createRoute({
@@ -34,9 +35,17 @@ const shoppingListRoute = createRoute({
   component: ShoppingList,
 });
 
+// Challenge 15
+const notificationsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/notifications",
+  component: Notifications,
+});
+
 export default [
   hotelBookingRoute,
   restaurantReservationRoute,
   taskBoardRoute,
   shoppingListRoute,
+  notificationsRoute,
 ];

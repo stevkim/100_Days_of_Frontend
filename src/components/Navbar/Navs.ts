@@ -69,4 +69,9 @@ export const NAVS = [
     name: "Shopping List",
     link: "/shopping-list",
   },
+  {
+    id: 15,
+    name: "Notifications Page",
+    link: "/notifications",
+  },
 ];
