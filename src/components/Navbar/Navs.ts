@@ -74,4 +74,9 @@ export const NAVS = [
     name: "Notifications Page",
     link: "/notifications-page",
   },
+  {
+    id: 16,
+    name: "Fur Friends",
+    link: "/fur-friends",
+  },
 ];

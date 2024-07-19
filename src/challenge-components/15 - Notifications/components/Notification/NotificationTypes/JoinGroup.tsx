@@ -1,4 +1,7 @@
-import type { TNotification, TPost } from "../../../types/notificationType";
+import type {
+  TNotification,
+  TJoinGroup,
+} from "../../../types/notificationType";
 import TimeStamp from "../../TimeStamp";
 
 interface JoinGroupProps {

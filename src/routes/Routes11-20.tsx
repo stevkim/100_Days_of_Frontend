@@ -6,6 +6,7 @@ import RestaurantReservationPage from "@/challenge-components/12 - RestaurantRes
 import TaskBoard from "@/challenge-components/13 - TaskBoard/TaskBoard";
 import ShoppingList from "@/challenge-components/14 - ShoppingList/ShoppingList";
 import NotificationsPage from "@/challenge-components/15 - Notifications/NotificationsPage";
+import FurFriends from "@/challenge-components/16 - FurFriends/FurFriends";
 
 // Challenge 11
 const hotelBookingRoute = createRoute({
@@ -42,10 +43,18 @@ const notificationsRoute = createRoute({
   component: NotificationsPage,
 });
 
+// Challenge 16
+const furFriendsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/fur-friends",
+  component: FurFriends,
+});
+
 export default [
   hotelBookingRoute,
   restaurantReservationRoute,
   taskBoardRoute,
   shoppingListRoute,
   notificationsRoute,
+  furFriendsRoute,
 ];
