@@ -1,6 +1,6 @@
-import useCurrentLocation from "../../hooks/useCurrentLocation";
+import useCurrentLocation from "../hooks/useCurrentLocation";
 import { MapPin } from "lucide-react";
-import { getDistanceInMiles } from "../../lib/getDistanceInMiles";
+import { getDistanceInMiles } from "../lib/getDistanceInMiles";
 
 interface DistanceProps {
   location: { lat: number; long: number };

@@ -7,6 +7,8 @@ import TaskBoard from "@/challenge-components/13 - TaskBoard/TaskBoard";
 import ShoppingList from "@/challenge-components/14 - ShoppingList/ShoppingList";
 import NotificationsPage from "@/challenge-components/15 - Notifications/NotificationsPage";
 import FurFriends from "@/challenge-components/16 - FurFriends/FurFriends";
+import DogListPage from "@/challenge-components/16 - FurFriends/DogListPage";
+import DogProfilePage from "@/challenge-components/16 - FurFriends/DogProfilePage";
 
 // Challenge 11
 const hotelBookingRoute = createRoute({
@@ -50,11 +52,23 @@ const furFriendsRoute = createRoute({
   component: FurFriends,
 });
 
+const furFriendsIndexRoute = createRoute({
+  getParentRoute: () => furFriendsRoute,
+  path: "/",
+  component: DogListPage,
+});
+
+const furFriendsProfileRoute = createRoute({
+  getParentRoute: () => furFriendsRoute,
+  path: "/$dogId",
+  component: DogProfilePage,
+});
+
 export default [
   hotelBookingRoute,
   restaurantReservationRoute,
   taskBoardRoute,
   shoppingListRoute,
   notificationsRoute,
-  furFriendsRoute,
+  furFriendsRoute.addChildren([furFriendsIndexRoute, furFriendsProfileRoute]),
 ];

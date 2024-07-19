@@ -1,10 +1,10 @@
-import ListHeader from "./List/ListHeader";
-import ListItem from "./List/ListItem";
-import { dogs } from "../data";
+import ListHeader from "./components/List/ListHeader";
+import SearchDoggo from "./components/List/SearchDoggo";
 import { useState, useMemo } from "react";
-import SearchDoggo from "./SearchDoggo";
+import { dogs } from "./data";
+import DoggoList from "./components/List/DoggoList";
 
-const DoggoList = () => {
+const DogListPage = () => {
   const [doggos] = useState(dogs);
   const [searchValue, setSearchValue] = useState("");
 
@@ -24,18 +24,13 @@ const DoggoList = () => {
   const handleChange = (value: string) => {
     setSearchValue(value.toLowerCase());
   };
-
   return (
-    <div className="mt-20 flex max-h-[600px] w-full flex-col gap-4 rounded-md bg-white p-6 shadow-lg md:w-[25rem]">
+    <div className="mt-20 flex max-h-[600px] w-full flex-col gap-4 rounded-md bg-white px-4 py-6 shadow-lg md:w-[22rem]">
       <ListHeader />
       <SearchDoggo handleChange={handleChange} />
-      <div className="flex h-[95%] flex-col gap-4 overflow-y-auto">
-        {activeDogs.map((doggo) => {
-          return <ListItem key={doggo.id} doggo={doggo} />;
-        })}
-      </div>
+      <DoggoList list={activeDogs} />
     </div>
   );
 };
 
-export default DoggoList;
+export default DogListPage;

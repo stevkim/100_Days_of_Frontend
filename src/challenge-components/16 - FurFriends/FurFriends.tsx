@@ -1,9 +1,10 @@
-import DoggoList from "./components/DoggoList";
+import { Outlet } from "@tanstack/react-router";
+import "./furFriendsStyles.css";
 
 const FurFriends = () => {
   return (
     <section className="flex h-page w-full justify-center bg-gray-200">
-      <DoggoList />
+      <Outlet />
     </section>
   );
 };
