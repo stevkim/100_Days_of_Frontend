@@ -1,3 +1,5 @@
+import type { TAUTHOR, TArticle } from "./types/dataTypes";
+
 // Cover photos
 import accessiblity from "@/assets/17 - ArticleSlider/accessibility.webp";
 import ai from "@/assets/17 - ArticleSlider/ai.webp";
@@ -12,7 +14,7 @@ import emily from "@/assets/17 - ArticleSlider/authors/emily.webp";
 import michael from "@/assets/17 - ArticleSlider/authors/michael.webp";
 import sarah from "@/assets/17 - ArticleSlider/authors/sarah.webp";
 
-export const AUTHORS = [
+export const AUTHORS: TAUTHOR[] = [
   {
     id: 0,
     name: "Jane Doe",
@@ -40,7 +42,7 @@ export const AUTHORS = [
   },
 ];
 
-export const ARTICLES = [
+export const ARTICLES: TArticle[] = [
   {
     id: 0,
     name: "The Rise of Serverless Architecture",

@@ -1,8 +1,8 @@
-import FacebookLogo from "@/assets/1 - ProfileCard/Social-Icons/Facebook_icon.svg";
-import DribbbleLogo from "@/assets/1 - ProfileCard/Social-Icons/Dribbble_logo.svg";
-import XLogo from "@/assets/1 - ProfileCard/Social-Icons/X_icon.svg";
-import InstagramLogo from "@/assets/1 - ProfileCard/Social-Icons/Instagram_icon.svg";
-import LinkedInLogo from "@/assets/1 - ProfileCard/Social-Icons/LinkedIn_logo.svg";
+import FacebookLogo from "@/assets/SocialMediaIcons/facebook.svg";
+import DribbbleLogo from "@/assets/SocialMediaIcons/dribbble.svg";
+import XLogo from "@/assets/SocialMediaIcons/x.svg";
+import InstagramLogo from "@/assets/SocialMediaIcons/instagram.svg";
+import LinkedInLogo from "@/assets/SocialMediaIcons/linkedin.svg";
 import SocialsBtn from "./Buttons/SocialsBtn";
 
 interface Props {
