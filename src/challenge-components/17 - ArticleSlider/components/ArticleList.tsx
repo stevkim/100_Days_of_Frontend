@@ -2,7 +2,6 @@ import ArticleCard from "./ArticleCard/ArticleCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useArticle from "../hooks/useArticle";
 import ListIndicator from "./ListIndicator";
-import CurrentIndicator from "./CurrentIndicator";
 
 const ArticleList = () => {
   const {
@@ -16,7 +15,6 @@ const ArticleList = () => {
 
   return (
     <div className="relative flex w-full max-w-[1000px] items-center justify-evenly border-2">
-      <CurrentIndicator articleNumber={articleIndex + 1} />
       <button
         className="flex aspect-square h-[30px] items-center justify-center rounded-lg bg-white shadow-lg"
         onClick={decrementIndex}
