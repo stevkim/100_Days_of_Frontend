@@ -16,6 +16,7 @@ const ArticleList = () => {
 
   return (
     <div className="relative flex w-full max-w-[1000px] items-center justify-evenly border-2">
+      <CurrentIndicator articleNumber={articleIndex + 1} />
       <button
         className="flex aspect-square h-[30px] items-center justify-center rounded-lg bg-white shadow-lg"
         onClick={decrementIndex}
