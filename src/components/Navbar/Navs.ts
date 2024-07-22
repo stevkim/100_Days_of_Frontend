@@ -79,4 +79,9 @@ export const NAVS = [
     name: "Fur Friends",
     link: "/fur-friends",
   },
+  {
+    id: 17,
+    name: "Article Slider",
+    link: "/article-slider",
+  },
 ];
