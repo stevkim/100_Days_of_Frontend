@@ -1,6 +1,6 @@
 import { TImage } from "../../types/imageType";
 import { useContext } from "react";
-import { ImageListcontext } from "../../ImagePreview";
+import { ImageListContext } from "../../ImagePreview";
 import { motion } from "framer-motion";
 
 interface CarouselItemProps {
@@ -11,7 +11,7 @@ interface CarouselItemProps {
 const CarouselItem = ({ image, index }: CarouselItemProps) => {
   const {
     controls: { setIndex },
-  } = useContext(ImageListcontext);
+  } = useContext(ImageListContext);
 
   const handleClick = (input: number) => {
     setIndex(input);
