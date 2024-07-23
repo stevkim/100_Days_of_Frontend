@@ -10,6 +10,7 @@ import FurFriends from "@/challenge-components/16 - FurFriends/FurFriends";
 import DogListPage from "@/challenge-components/16 - FurFriends/DogListPage";
 import DogProfilePage from "@/challenge-components/16 - FurFriends/DogProfilePage";
 import ArticleSlider from "@/challenge-components/17 - ArticleSlider/ArticleSlider";
+import ImagePreview from "@/challenge-components/18 - ImagePreviews/ImagePreview";
 
 // Challenge 11
 const hotelBookingRoute = createRoute({
@@ -72,6 +73,13 @@ const articleSliderRoute = createRoute({
   component: ArticleSlider,
 });
 
+// Challenge 17
+const imagePreviewRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/image-preview",
+  component: ImagePreview,
+});
+
 export default [
   hotelBookingRoute,
   restaurantReservationRoute,
@@ -80,4 +88,5 @@ export default [
   notificationsRoute,
   furFriendsRoute.addChildren([furFriendsIndexRoute, furFriendsProfileRoute]),
   articleSliderRoute,
+  imagePreviewRoute,
 ];

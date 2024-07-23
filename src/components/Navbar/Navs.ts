@@ -84,4 +84,9 @@ export const NAVS = [
     name: "Article Slider",
     link: "/article-slider",
   },
+  {
+    id: 18,
+    name: "Image Preview",
+    link: "/image-preview",
+  },
 ];
