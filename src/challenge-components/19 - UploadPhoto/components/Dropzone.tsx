@@ -1,9 +1,12 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import ImageIcon from "@/assets/19 - UploadPhoto/imageicon.png";
 
-const Dropzone = () => {
+interface DropzoneProps {
+  handleSetImages: (files: FileList | null) => void;
+}
+
+const Dropzone = ({ handleSetImages }: DropzoneProps) => {
   const dropzoneRef = useRef<HTMLInputElement | null>(null);
-  const [photos, setPhotos] = useState<File[] | null>(null);
 
   const handleClick = () => {
     if (dropzoneRef.current?.disabled) {
@@ -14,16 +17,7 @@ const Dropzone = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
-
-    const images = [];
-
-    if (files) {
-      for (let i = 0; i < files?.length; i++) {
-        images.push(files.item(i));
-      }
-    }
-    console.log(images);
-    setPhotos(images as File[]);
+    handleSetImages(files);
   };
 
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
@@ -34,21 +28,12 @@ const Dropzone = () => {
     e.preventDefault();
 
     const files = e.dataTransfer.files;
-
-    const images = [];
-
-    if (files) {
-      for (let i = 0; i < files?.length; i++) {
-        images.push(files.item(i));
-      }
-    }
-    console.log(images);
-    setPhotos(images as File[]);
+    handleSetImages(files);
   };
 
   return (
     <div
-      className="flex h-[15rem] w-full flex-col items-center justify-center rounded-lg border-2 border-dashed"
+      className="my-4 flex h-[15rem] w-full flex-col items-center justify-center rounded-lg border-2 border-dashed"
       onClick={handleClick}
       onDrop={handleDrop}
       onDragOver={handleDragOver}
