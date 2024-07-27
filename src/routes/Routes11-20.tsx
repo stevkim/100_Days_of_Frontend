@@ -11,6 +11,7 @@ import DogListPage from "@/challenge-components/16 - FurFriends/DogListPage";
 import DogProfilePage from "@/challenge-components/16 - FurFriends/DogProfilePage";
 import ArticleSlider from "@/challenge-components/17 - ArticleSlider/ArticleSlider";
 import ImagePreview from "@/challenge-components/18 - ImagePreviews/ImagePreview";
+import UploadPhoto from "@/challenge-components/19 - UploadPhoto/UploadPhoto";
 
 // Challenge 11
 const hotelBookingRoute = createRoute({
@@ -80,6 +81,13 @@ const imagePreviewRoute = createRoute({
   component: ImagePreview,
 });
 
+// Challenge 18
+const uploadPhotoRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/upload-photo",
+  component: UploadPhoto,
+});
+
 export default [
   hotelBookingRoute,
   restaurantReservationRoute,
@@ -89,4 +97,5 @@ export default [
   furFriendsRoute.addChildren([furFriendsIndexRoute, furFriendsProfileRoute]),
   articleSliderRoute,
   imagePreviewRoute,
+  uploadPhotoRoute,
 ];

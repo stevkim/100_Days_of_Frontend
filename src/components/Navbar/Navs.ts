@@ -89,4 +89,9 @@ export const NAVS = [
     name: "Image Preview",
     link: "/image-preview",
   },
+  {
+    id: 19,
+    name: "Upload Photo",
+    link: "/upload-photo",
+  },
 ];
