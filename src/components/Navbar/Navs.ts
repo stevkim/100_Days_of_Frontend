@@ -94,4 +94,9 @@ export const NAVS = [
     name: "Upload Photo",
     link: "/upload-photo",
   },
+  {
+    id: 20,
+    name: "Card Wallet",
+    link: "/card-wallet",
+  },
 ];

@@ -12,6 +12,7 @@ import DogProfilePage from "@/challenge-components/16 - FurFriends/DogProfilePag
 import ArticleSlider from "@/challenge-components/17 - ArticleSlider/ArticleSlider";
 import ImagePreview from "@/challenge-components/18 - ImagePreviews/ImagePreview";
 import UploadPhoto from "@/challenge-components/19 - UploadPhoto/UploadPhoto";
+import CardWallet from "@/challenge-components/20 - CardWallet/CardWallet";
 
 // Challenge 11
 const hotelBookingRoute = createRoute({
@@ -74,18 +75,25 @@ const articleSliderRoute = createRoute({
   component: ArticleSlider,
 });
 
-// Challenge 17
+// Challenge 18
 const imagePreviewRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/image-preview",
   component: ImagePreview,
 });
 
-// Challenge 18
+// Challenge 19
 const uploadPhotoRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/upload-photo",
   component: UploadPhoto,
+});
+
+// Challenge 20
+const cardWalletRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/card-wallet",
+  component: CardWallet,
 });
 
 export default [
@@ -98,4 +106,5 @@ export default [
   articleSliderRoute,
   imagePreviewRoute,
   uploadPhotoRoute,
+  cardWalletRoute,
 ];
