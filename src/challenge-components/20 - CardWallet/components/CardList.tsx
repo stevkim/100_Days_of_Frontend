@@ -1,7 +1,7 @@
 import Card from "./Card";
 import { motion, PanInfo } from "framer-motion";
 import { useContext, useEffect, useRef, useState } from "react";
-import { CardContext } from "../CardWallet";
+import { CardContext } from "../CardWalletWrapper";
 
 const CardList = () => {
   const { cards, current, handleSwipeLeft, handleSwipeRight } =

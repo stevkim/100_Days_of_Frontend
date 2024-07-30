@@ -53,3 +53,6 @@ export const CardImage = {
   },
   unknown: { default: "", outline: "", card: "" },
 };
+
+export type CardImageType = keyof typeof CardImage;
+export const CardImageKeys = Object.keys(CardImage);

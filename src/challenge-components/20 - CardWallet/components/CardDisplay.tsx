@@ -1,6 +1,7 @@
 import CardList from "./CardList";
 import CardIndicator from "./CardIndicator";
 import { Plus } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 const CardDisplay = () => {
   return (
@@ -15,9 +16,9 @@ const CardDisplay = () => {
         <div className="h-0 w-0 border-l-[4rem] border-r-[4rem] border-t-[3rem] border-black border-l-transparent border-r-transparent"></div>
       </div>
       <div className="absolute bottom-[-2rem] left-0 flex w-full justify-center">
-        <button className="h-fit w-fit rounded-full bg-blue-300">
+        <Link className="h-fit w-fit rounded-full bg-blue-300" to={"add-card"}>
           <Plus size={32} color="white" />
-        </button>
+        </Link>
       </div>
     </div>
   );

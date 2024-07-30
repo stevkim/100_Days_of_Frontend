@@ -1,6 +1,6 @@
 import { Dot } from "lucide-react";
 import { useContext } from "react";
-import { CardContext } from "../CardWallet";
+import { CardContext } from "../CardWalletWrapper";
 
 const CardIndicator = () => {
   const { cards, current, setCurrent } = useContext(CardContext);

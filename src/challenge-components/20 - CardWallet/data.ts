@@ -15,7 +15,7 @@ export type TCard = {
   transactions: TTransaction[];
 };
 
-export const CARDS = [
+export const CARDS: TCard[] = [
   {
     id: 0,
     cardNumber: "4532 8615 3325 8976",

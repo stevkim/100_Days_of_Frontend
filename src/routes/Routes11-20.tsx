@@ -12,7 +12,9 @@ import DogProfilePage from "@/challenge-components/16 - FurFriends/DogProfilePag
 import ArticleSlider from "@/challenge-components/17 - ArticleSlider/ArticleSlider";
 import ImagePreview from "@/challenge-components/18 - ImagePreviews/ImagePreview";
 import UploadPhoto from "@/challenge-components/19 - UploadPhoto/UploadPhoto";
+import CardWalletWrapper from "@/challenge-components/20 - CardWallet/CardWalletWrapper";
 import CardWallet from "@/challenge-components/20 - CardWallet/CardWallet";
+import AddCardForm from "@/challenge-components/20 - CardWallet/AddCardForm";
 
 // Challenge 11
 const hotelBookingRoute = createRoute({
@@ -93,7 +95,19 @@ const uploadPhotoRoute = createRoute({
 const cardWalletRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/card-wallet",
+  component: CardWalletWrapper,
+});
+
+const cardWalletIndexRoute = createRoute({
+  getParentRoute: () => cardWalletRoute,
+  path: "/",
   component: CardWallet,
+});
+
+const cardWalletFormRoute = createRoute({
+  getParentRoute: () => cardWalletRoute,
+  path: "/add-card",
+  component: AddCardForm,
 });
 
 export default [
@@ -106,5 +120,5 @@ export default [
   articleSliderRoute,
   imagePreviewRoute,
   uploadPhotoRoute,
-  cardWalletRoute,
+  cardWalletRoute.addChildren([cardWalletIndexRoute, cardWalletFormRoute]),
 ];
