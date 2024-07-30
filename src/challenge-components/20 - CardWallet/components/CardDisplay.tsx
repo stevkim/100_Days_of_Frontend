@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router";
 
 const CardDisplay = () => {
   return (
-    <div className="relative mb-[3rem] h-[42%] w-full rounded-2xl bg-black px-4 py-8 text-white">
+    <div className="relative mb-[3rem] h-[42%] w-full rounded-2xl bg-black px-4 py-8 text-white md:h-[50%]">
       <h3 className="text-4xl">
         <span className="block text-xs">Welcome</span>
         My Cards

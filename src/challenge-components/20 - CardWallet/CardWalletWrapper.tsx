@@ -58,7 +58,7 @@ const CardWalletWrapper = () => {
           setCurrent,
         }}
       >
-        <div className="mt-20 h-full max-h-[800px] w-full max-w-[500px] overflow-hidden rounded-2xl bg-white">
+        <div className="mt-20 h-full max-h-[800px] w-full max-w-[500px] overflow-hidden rounded-2xl bg-white md:max-h-[80vh]">
           <Outlet />
         </div>
       </CardContext.Provider>

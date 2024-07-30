@@ -18,6 +18,7 @@ const CardNumberIndicator = ({ cardNumber }: CardNumberIndicatorProps) => {
         if (key !== "unknown") {
           return (
             <img
+              key={key}
               src={
                 CARD_TYPE === key
                   ? CardImage[key as CardImageType].default
