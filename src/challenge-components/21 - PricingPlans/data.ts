@@ -1,3 +1,10 @@
+export type TPlan = {
+  type: string;
+  name: string;
+  price: number;
+  features: string[];
+};
+
 export const PLANS = [
   {
     type: "aio",
