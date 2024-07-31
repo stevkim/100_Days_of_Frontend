@@ -99,4 +99,9 @@ export const NAVS = [
     name: "Card Wallet",
     link: "/card-wallet",
   },
+  {
+    id: 21,
+    name: "Pricing Plans",
+    link: "/pricing-plans",
+  },
 ];
