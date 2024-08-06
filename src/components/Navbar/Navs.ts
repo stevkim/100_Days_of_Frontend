@@ -104,4 +104,9 @@ export const NAVS = [
     name: "Pricing Plans",
     link: "/pricing-plans",
   },
+  {
+    id: 22,
+    name: "Messages",
+    link: "/messages",
+  },
 ];
